@@ -16,7 +16,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class UpdateFeatureFlagDto {
 
-    @NotBlank(message = "Flag name must not be blank.")
     @Size(min = 2, max = 50, message = "Flag name must be btw 2 and 50 chars.")
     @Pattern(regexp = "^[a-z0-9]+(-[a-z0-9]+)*$", message = "Flag name must be kebab-case.")
     private String name;
